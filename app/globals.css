@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-white bg-slate-900;
+    @apply text-white bg-slate-900 relative;
   }
 
   button {
