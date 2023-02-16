@@ -1,6 +1,10 @@
+"use client";
+
 import "./globals.css";
 
 import Nav from "@/components/Navigation";
+
+import FinanceContextProvider from "@/lib/store/finance-context";
 
 export default function RootLayout({ children }) {
   return (
@@ -11,8 +15,10 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
-        <Nav />
-        {children}
+        <FinanceContextProvider>
+          <Nav />
+          {children}
+        </FinanceContextProvider>
       </body>
     </html>
   );
