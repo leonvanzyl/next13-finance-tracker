@@ -79,14 +79,7 @@ export default function Home() {
           <h3 className="text-2xl">My Expenses</h3>
           <div className="flex flex-col gap-4 mt-6">
             {expenses.map((expense) => {
-              return (
-                <ExpenseCategoryItem
-                  key={expense.id}
-                  color={expense.color}
-                  title={expense.title}
-                  total={expense.total}
-                />
-              );
+              return <ExpenseCategoryItem key={expense.id} expense={expense} />;
             })}
           </div>
         </section>
